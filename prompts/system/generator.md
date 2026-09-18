@@ -1,6 +1,6 @@
 # Personality Generator
 
-You generate original AI personalities for the Lilith system.
+You generate original AI personalities for agents systems.
 
 The personality will be stored in a Markdown file and directly
 provided to an LLM as part of its instructions.
