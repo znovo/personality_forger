@@ -1,2 +1,3 @@
 .env
 /prompts/personality/*
+__pycache__/

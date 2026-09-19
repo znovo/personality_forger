@@ -7,12 +7,21 @@ class LlmClient:
         self.model = model
         self.client = openai.OpenAI(api_key=self.api_key, base_url=self.base_url)
 
-    def swap_model(self, new_model: str):
-        self.model = new_model
     def swap_api_key(self, new_api_key: str):
         self.api_key = new_api_key
+        self.client = openai.OpenAI(
+            api_key=self.api_key,
+            base_url=self.base_url
+        )
+
     def swap_base_url(self, new_base_url: str):
         self.base_url = new_base_url
+        self.client = openai.OpenAI(
+            api_key=self.api_key,
+            base_url=self.base_url
+            )
+    def swap_model(self, new_model: str):
+        self.model = new_model
 
     def call_model(self, system, user, temperature=0.9):
         messages = [
