@@ -1,3 +1,6 @@
 .env
 /prompts/personality/*
 __pycache__/
+.opencode
+.
+node_modules
